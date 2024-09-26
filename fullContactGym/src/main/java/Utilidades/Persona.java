@@ -2,27 +2,28 @@ package Utilidades;
 
 import java.io.Serializable;
 
-public class Persona implements Serializable{
-    private String id, nombre, sexo, empresa, requerimiento, estado, fecha, motivoMulta, motivoPago;
-    int multas, totalPagar, transporte;
+public class Persona implements Serializable {
+    private String id;
+    private String nombre;
+    private String sexo;
+    private String contrasenna;
+    private String email;
+    private String celular;
+    private String fechaDeNacimiento;
+    private boolean membresiaActiva;
 
     public Persona() {
     }
 
-    public Persona(String id, String nombre, String sexo, String empresa, String requerimiento, String estado, String fecha,
-            int multas, String motivo, int totalPagar, String motivoPago, int transporte) {
+    public Persona(String id, String nombre, String sexo, String contrasenna, String email, String celular, String fechaDeNacimiento, boolean membresiaActiva) {
         this.id = id;
         this.nombre = nombre;
         this.sexo = sexo;
-        this.empresa = empresa;
-        this.requerimiento = requerimiento;
-        this.estado = estado;
-        this.fecha = fecha;
-        this.multas = multas;
-        this.motivoMulta = motivo;
-        this.totalPagar = totalPagar;
-        this.motivoPago = motivoPago;
-        this.transporte = transporte;
+        this.contrasenna = contrasenna;
+        this.email = email;
+        this.celular = celular;
+        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.membresiaActiva = membresiaActiva;
     }
 
     public String getId() {
@@ -49,80 +50,57 @@ public class Persona implements Serializable{
         this.sexo = sexo;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getContrasenna() {
+        return contrasenna;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setContrasenna(String contrasenna) {
+        this.contrasenna = contrasenna;
     }
 
-    public String getRequerimiento() {
-        return requerimiento;
+    public String getEmail() {
+        return email;
     }
 
-    public void setRequerimiento(String requerimiento) {
-        this.requerimiento = requerimiento;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getEstado() {
-        return estado;
+    public String getCelular() {
+        return celular;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getFechaDeNacimiento() {
+        return fechaDeNacimiento;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setFechaDeNacimiento(String fechaDeNacimiento) {
+        this.fechaDeNacimiento = fechaDeNacimiento;
     }
 
-    public int getMultas() {
-        return multas;
+    public boolean isMembresiaActiva() {
+        return membresiaActiva;
     }
 
-    public void setMultas(int multas) {
-        this.multas = multas;
-    }
-
-    public String getMotivoMulta() {
-        return motivoMulta;
-    }
-
-    public void setMotivoMulta(String motivoMulta) {
-        this.motivoMulta = motivoMulta;
-    }
-
-    public String getMotivoPago() {
-        return motivoPago;
-    }
-
-    public void setMotivoPago(String motivoPago) {
-        this.motivoPago = motivoPago;
-    }
-
-    public int getTotalPagar() {
-        return totalPagar;
-    }
-
-    public void setTotalPagar(int totalPagar) {
-        this.totalPagar = totalPagar;
-    }
-
-    public int getTransporte() {
-        return transporte;
-    }
-
-    public void setTransporte(int transporte) {
-        this.transporte = transporte;
+    public void setMembresiaActiva(boolean membresiaActiva) {
+        this.membresiaActiva = membresiaActiva;
     }
 
     @Override
     public String toString() {
-        return "Persona{" + "id=" + id + ", nombre=" + nombre + ", sexo=" + sexo + ", empresa=" + empresa + ", requerimiento=" + requerimiento + ", estado=" + estado + ", fecha=" + fecha + ", motivoMulta=" + motivoMulta + ", motivoPago=" + motivoPago + ", multas=" + multas + ", totalPagar=" + totalPagar + ", transporte=" + transporte + '}';
+        return "Persona{" +
+                "id='" + id + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", sexo='" + sexo + '\'' +
+                ", contrasenna='" + contrasenna + '\'' +
+                ", email='" + email + '\'' +
+                ", celular='" + celular + '\'' +
+                ", fechaDeNacimiento='" + fechaDeNacimiento + '\'' +
+                ", membresiaActiva=" + membresiaActiva +
+                '}';
     }
 }

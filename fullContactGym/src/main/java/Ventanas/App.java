@@ -22,54 +22,38 @@ public class App extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jLabelPortada = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuGestiones = new javax.swing.JMenu();
         jMenuItemNuevaSolicitud = new javax.swing.JMenuItem();
+        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
+        jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
         jMenuItemBuscarCliente = new javax.swing.JMenuItem();
-        jMenuItemListaSolicitudes = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItemAyuda = new javax.swing.JMenuItem();
         jMenuReportes = new javax.swing.JMenu();
         jMenuItemReporteDiario = new javax.swing.JMenuItem();
+        jMenuItemListaSolicitudes = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabelPortada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel1.setText("KPOP");
-        jLabel1.setToolTipText("cantar maniac");
-        jLabel1.setName(""); // NOI18N
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabelPortada, javax.swing.GroupLayout.DEFAULT_SIZE, 1499, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(209, 209, 209)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabelPortada, javax.swing.GroupLayout.DEFAULT_SIZE, 1568, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jLabel1)
-                .addGap(32, 32, 32)
-                .addComponent(jLabelPortada, javax.swing.GroupLayout.PREFERRED_SIZE, 456, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(164, Short.MAX_VALUE))
+                .addComponent(jLabelPortada, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 135, Short.MAX_VALUE))
         );
 
         jMenuGestiones.setText("Gestiones");
@@ -79,13 +63,21 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        jMenuItemNuevaSolicitud.setText("Nueva Solicitud");
+        jMenuItemNuevaSolicitud.setText("Rregistrarse");
         jMenuItemNuevaSolicitud.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemNuevaSolicitudActionPerformed(evt);
             }
         });
         jMenuGestiones.add(jMenuItemNuevaSolicitud);
+
+        jRadioButtonMenuItem1.setSelected(true);
+        jRadioButtonMenuItem1.setText("Iniciar Sesion");
+        jMenuGestiones.add(jRadioButtonMenuItem1);
+
+        jRadioButtonMenuItem2.setSelected(true);
+        jRadioButtonMenuItem2.setText("Comprar Membrecia");
+        jMenuGestiones.add(jRadioButtonMenuItem2);
 
         jMenuItemBuscarCliente.setText("Buscar Cliente");
         jMenuItemBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -94,14 +86,6 @@ public class App extends javax.swing.JFrame {
             }
         });
         jMenuGestiones.add(jMenuItemBuscarCliente);
-
-        jMenuItemListaSolicitudes.setText("Lista de solicitudes");
-        jMenuItemListaSolicitudes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemListaSolicitudesActionPerformed(evt);
-            }
-        });
-        jMenuGestiones.add(jMenuItemListaSolicitudes);
         jMenuGestiones.add(jSeparator1);
 
         jMenuItemAyuda.setText("Ayuda");
@@ -121,13 +105,21 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        jMenuItemReporteDiario.setText("Reporte Diario");
+        jMenuItemReporteDiario.setText("Reporte de Compras");
         jMenuItemReporteDiario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemReporteDiarioActionPerformed(evt);
             }
         });
         jMenuReportes.add(jMenuItemReporteDiario);
+
+        jMenuItemListaSolicitudes.setText("Lista de Clientes");
+        jMenuItemListaSolicitudes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemListaSolicitudesActionPerformed(evt);
+            }
+        });
+        jMenuReportes.add(jMenuItemListaSolicitudes);
 
         jMenuBar1.add(jMenuReportes);
 
@@ -186,10 +178,6 @@ public class App extends javax.swing.JFrame {
         ventana.setVisible(true);
     }//GEN-LAST:event_jMenuItemAyudaActionPerformed
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        System.out.println("Esto es un evento");// TODO add your handling code here:
-    }//GEN-LAST:event_jLabel1MouseClicked
-
     /**
      * @param args the command line arguments
      */
@@ -226,10 +214,10 @@ public class App extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelPortada;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuGestiones;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItemAyuda;
     private javax.swing.JMenuItem jMenuItemBuscarCliente;
     private javax.swing.JMenuItem jMenuItemListaSolicitudes;
@@ -237,6 +225,8 @@ public class App extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItemReporteDiario;
     private javax.swing.JMenu jMenuReportes;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
+    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     // End of variables declaration//GEN-END:variables
 }

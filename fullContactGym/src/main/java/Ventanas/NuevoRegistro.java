@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static javax.swing.WindowConstants.HIDE_ON_CLOSE;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -39,7 +40,7 @@ public class NuevoRegistro extends javax.swing.JFrame {
         jComboBoxSexo = new javax.swing.JComboBox<>();
         jButtonAgregar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
-        jTextFieldContraseña = new javax.swing.JTextField();
+        jTextFieldContrasenna = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jTextFieldEmail = new javax.swing.JTextField();
@@ -105,8 +106,15 @@ public class NuevoRegistro extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(322, 322, 322)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addContainerGap())
@@ -124,23 +132,15 @@ public class NuevoRegistro extends javax.swing.JFrame {
                                     .addComponent(jTextFieldCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldIdFechaDeNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldContrasenna, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldId, javax.swing.GroupLayout.PREFERRED_SIZE, 522, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addContainerGap(116, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButtonAgregar)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jComboBoxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 222, Short.MAX_VALUE)
+                                .addComponent(jButtonAgregar)
                                 .addGap(357, 357, 357))))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(322, 322, 322)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -157,7 +157,7 @@ public class NuevoRegistro extends javax.swing.JFrame {
                     .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldContraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldContrasenna, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -171,13 +171,13 @@ public class NuevoRegistro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldIdFechaDeNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel6)
                     .addComponent(jComboBoxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(48, 48, 48)
                 .addComponent(jButtonAgregar)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -193,24 +193,50 @@ public class NuevoRegistro extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 77, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgregarActionPerformed
-        Modelo.AGENDA.adiccionarCliente(new Persona(jTextFieldId.getText(), jTextFieldNombre.getText(), jComboBoxSexo.getSelectedItem().toString(),
-            jTextFieldContraseña.getText(), jTextFieldEmail.getText(), jTextFieldCelular.getText(),
-            jTextFieldIdFechaDeNacimiento.getText(), 0, "", 0, "", 0));
+        // Verificar que todos los campos estén llenos
+        if (jTextFieldId.getText().isEmpty() || jTextFieldNombre.getText().isEmpty() || jTextFieldContrasenna.getText().isEmpty() ||
+            jTextFieldEmail.getText().isEmpty() || jTextFieldCelular.getText().isEmpty() || jTextFieldIdFechaDeNacimiento.getText().isEmpty() ||
+            jComboBoxSexo.getSelectedIndex() == 0) {
+            JOptionPane.showMessageDialog(this, "Por favor, complete todos los campos.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
 
-    jTextFieldNombre.setText("");
-    jTextFieldId.setText("");
-    jTextFieldIdFechaDeNacimiento.setText("");
-    jComboBoxSexo.setSelectedIndex(0);
-    jTextFieldContraseña.setText("");
-    jTextFieldEmail.setText("");
-    jTextFieldCelular.setText("");
+        // Crear una nueva instancia de Persona
+        Persona nuevaPersona = new Persona(
+            jTextFieldId.getText(),
+            jTextFieldNombre.getText(),
+            jComboBoxSexo.getSelectedItem().toString(),
+            jTextFieldContrasenna.getText(),
+            jTextFieldEmail.getText(),
+            jTextFieldCelular.getText(),
+            jTextFieldIdFechaDeNacimiento.getText(),
+            false // Membresía activa inicialmente en false
+        );
+
+        // Agregar la nueva persona a la agenda
+        Modelo.AGENDA.add(nuevaPersona);
+
+        // Guardar los datos en el archivo
+        Modelo.guardarDatos();
+
+        // Limpiar los campos del formulario
+        jTextFieldNombre.setText("");
+        jTextFieldId.setText("");
+        jTextFieldIdFechaDeNacimiento.setText("");
+        jComboBoxSexo.setSelectedIndex(0);
+        jTextFieldContrasenna.setText("");
+        jTextFieldEmail.setText("");
+        jTextFieldCelular.setText("");
+
+        // Mostrar mensaje de éxito
+        JOptionPane.showMessageDialog(this, "Usuario registrado exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButtonAgregarActionPerformed
 
     private void jComboBoxSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxSexoActionPerformed
@@ -239,7 +265,7 @@ public class NuevoRegistro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextFieldCelular;
-    private javax.swing.JTextField jTextFieldContraseña;
+    private javax.swing.JTextField jTextFieldContrasenna;
     private javax.swing.JTextField jTextFieldEmail;
     private javax.swing.JTextField jTextFieldId;
     private javax.swing.JTextField jTextFieldIdFechaDeNacimiento;
