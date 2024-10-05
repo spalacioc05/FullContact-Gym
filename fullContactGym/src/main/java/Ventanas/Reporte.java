@@ -1,12 +1,12 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package Ventanas;
-
-import Utilidades.Modelo;
-import java.io.IOException;
-import javax.swing.JOptionPane;
 
 /**
  *
- * @author Duvan Ruiz
+ * @author HP
  */
 public class Reporte extends javax.swing.JFrame {
 
@@ -14,16 +14,7 @@ public class Reporte extends javax.swing.JFrame {
      * Creates new form Reporte
      */
     public Reporte() {
-        super("Buscar u/o Actualizar");
         initComponents();
-        this.setDefaultCloseOperation(HIDE_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        jLabel2.setVisible(false);
-        jLabelClientesAtendidos.setVisible(false);
-        jTextAreaListado.setVisible(false);
-        jLabel3.setVisible(false);
-        jLabelRecaudo.setVisible(false);
-        jLabel4.setVisible(false);
     }
 
     /**
@@ -36,171 +27,146 @@ public class Reporte extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabelClientesAtendidos = new javax.swing.JLabel();
-        jButtonGenerarReporte = new javax.swing.JButton();
+        buttonReporte = new javax.swing.JButton();
+        buttonPDF = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextAreaListado = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
-        jLabelRecaudo = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabelGastoTransporte = new javax.swing.JLabel();
-        jButtonCrearPDF = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Stay and Shine", 1, 24)); // NOI18N
-        jLabel1.setText("Reportes");
+        jPanel1.setBackground(new java.awt.Color(255, 241, 186));
 
-        jLabel2.setText("Numero de clientes atendidos:");
-
-        jButtonGenerarReporte.setBackground(new java.awt.Color(0, 102, 255));
-        jButtonGenerarReporte.setText("Generar Reporte");
-        jButtonGenerarReporte.addActionListener(new java.awt.event.ActionListener() {
+        buttonReporte.setBackground(new java.awt.Color(44, 44, 44));
+        buttonReporte.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        buttonReporte.setForeground(new java.awt.Color(255, 255, 255));
+        buttonReporte.setText("Generar reporte");
+        buttonReporte.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonGenerarReporteActionPerformed(evt);
+                buttonReporteActionPerformed(evt);
             }
         });
 
-        jTextAreaListado.setColumns(20);
-        jTextAreaListado.setRows(5);
-        jScrollPane1.setViewportView(jTextAreaListado);
-
-        jLabel3.setText("Recaudo:");
-
-        jLabel4.setText("Gastos en transporte:");
-
-        jButtonCrearPDF.setBackground(new java.awt.Color(0, 102, 255));
-        jButtonCrearPDF.setText("CrearPDF");
-        jButtonCrearPDF.addActionListener(new java.awt.event.ActionListener() {
+        buttonPDF.setBackground(new java.awt.Color(44, 44, 44));
+        buttonPDF.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        buttonPDF.setForeground(new java.awt.Color(255, 255, 255));
+        buttonPDF.setText("Crear PDF");
+        buttonPDF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonCrearPDFActionPerformed(evt);
+                buttonPDFActionPerformed(evt);
             }
         });
 
+        jTextArea1.setBackground(new java.awt.Color(255, 255, 255));
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jTextArea2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextArea2.setColumns(20);
+        jTextArea2.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        jTextArea2.setForeground(new java.awt.Color(0, 0, 0));
+        jTextArea2.setRows(5);
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 28)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Reportes");
+        jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelGastoTransporte, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabelClientesAtendidos, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(102, 102, 102)
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabelRecaudo))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonGenerarReporte)
-                        .addGap(28, 28, 28)
-                        .addComponent(jButtonCrearPDF))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 622, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(269, 269, 269)
-                        .addComponent(jLabel1))
+                        .addComponent(buttonReporte)
+                        .addGap(12, 12, 12)
+                        .addComponent(buttonPDF))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 715, Short.MAX_VALUE)
                     .addComponent(jScrollPane2))
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGap(21, 21, 21))
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(16, 16, 16)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonGenerarReporte)
-                    .addComponent(jButtonCrearPDF))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabelClientesAtendidos)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabelRecaudo))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabelGastoTransporte))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(76, Short.MAX_VALUE))
+                .addGap(2, 2, 2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(buttonReporte)
+                    .addComponent(buttonPDF))
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)
+                .addGap(21, 21, 21))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonGenerarReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarReporteActionPerformed
-        
-        
-        String lista = Modelo.AGENDA.listarClientes();
-        if(lista != ""){
-            jLabelClientesAtendidos.setText(Integer.toString(Modelo.AGENDA.numClientes()));
-            jTextAreaListado.setText(lista);
-            jLabelRecaudo.setText(Float.toString(Modelo.AGENDA.recaudo()));
-            jLabelGastoTransporte.setText(Float.toString(Modelo.AGENDA.gastoTransporte()));
+    private void buttonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPDFActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonPDFActionPerformed
 
-            jLabel2.setVisible(true);
-            jLabelClientesAtendidos.setVisible(true);
-            jTextAreaListado.setVisible(true);
-            jLabel3.setVisible(true);
-            jLabelRecaudo.setVisible(true);
-            jLabel4.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(this,"No hay registros en el sistema.");
+    private void buttonReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReporteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonReporteActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Reporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Reporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Reporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Reporte.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButtonGenerarReporteActionPerformed
+        //</editor-fold>
 
-    private void jButtonCrearPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearPDFActionPerformed
-        Modelo.AGENDA.crearPDF2();
-        JOptionPane.showMessageDialog(this, "Se ha creado el archivo PDF");
-    }//GEN-LAST:event_jButtonCrearPDFActionPerformed
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Reporte().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonCrearPDF;
-    private javax.swing.JButton jButtonGenerarReporte;
+    private javax.swing.JButton buttonPDF;
+    private javax.swing.JButton buttonReporte;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabelClientesAtendidos;
-    private javax.swing.JLabel jLabelGastoTransporte;
-    private javax.swing.JLabel jLabelRecaudo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextAreaListado;
+    private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
 }

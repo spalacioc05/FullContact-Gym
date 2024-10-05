@@ -17,8 +17,6 @@ public class Ayuda extends javax.swing.JFrame {
         this.setDefaultCloseOperation(HIDE_ON_CLOSE);
         this.setLocationRelativeTo(null);
     }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,14 +34,24 @@ public class Ayuda extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setFont(new java.awt.Font("Lucida Sans", 3, 18)); // NOI18N
+        setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Stay and Shine", 1, 24)); // NOI18N
+        jPanel1.setBackground(new java.awt.Color(255, 241, 194));
+        jPanel1.setFont(new java.awt.Font("Lucida Sans", 3, 18)); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Lucida Sans", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Ayuda");
 
+        jTextAreaInfo.setBackground(new java.awt.Color(255, 255, 255));
         jTextAreaInfo.setColumns(20);
         jTextAreaInfo.setRows(5);
         jScrollPane1.setViewportView(jTextAreaInfo);
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Lucida Sans", 3, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Generar Ayuda");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,75 +66,35 @@ public class Ayuda extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1))
+                        .addGap(297, 297, 297)
+                        .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(297, 297, 297)
-                                .addComponent(jLabel1))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jButton1)))
-                        .addGap(0, 282, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(jButton1)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 324, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        jTextAreaInfo.setText("La finalidad de este aplicativo es registrar clientes y llevar el control de permisos para "
-                + "aprovechamiento forestal.\n" +
-                "Al iniciar el programa este contara con las siguientes ventanas:\n\n" +
-                "1. Nueva solicitud: Acá se registra un nuevo cliente llenando todos los campos\n requeridos.\n" +
-                 "2. Buscar cliente: En esta ventana habrán varias funcionalidades como lo es buscar, "
-                + "\nactualizar y eliminar un "
-                + "cliente. En el caso de buscar, es para verificar el registro de un cliente \npor medio del ID y "
-                + "verificar en qué estado se encuentra su solicitud. Actualizar lo que hace es \ncambiar los datos "
-                + "de un registro y por ende después de haber sido estudiado el caso cambiar su estado\n de recibido "
-                + "por aprobado, rechazado etc o en caso de tal de tener un multa modificar dicho estado. \nEliminar, "
-                + "nos borrará un registro del sistema por medio del ID.\n" +
-                "3. Lista de solicitudes: En esta ventana se listara todas las solicitudes que hay en \nel sistema "
-                + "actualmente.\n" +
-                "4. Reporte diario: Acá se detallara los clientes registrados así como su estado y lo \nrecaudado en "
-                + "dinero.\n" +
-                "\n\n" +
-                "\tDuvan Ferney Ruiz Ocampo\n" +
-                "\tCc 1036785534\n" +
-                "\tRafael Osorio Gomez\n" +
-                "\tCc 1036928503\n" +
-                "\tTécnicas de Programación. ");
+        
     }//GEN-LAST:event_jButton1ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

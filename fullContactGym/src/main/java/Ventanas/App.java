@@ -1,16 +1,29 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package Ventanas;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 /**
  *
- * @author Duvan Ruiz
+ * @author HP
  */
 public class App extends javax.swing.JFrame {
+
+    /**
+     * Creates new form Intento
+     */
+    
+    FondoPanel fondo = new FondoPanel();
     
     public App() {
-        super("Aprovechamiento ambiental La Unión");
+        this.setContentPane(fondo);
         initComponents();
-        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -22,106 +35,60 @@ public class App extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jPanel1 = new javax.swing.JPanel();
-        jLabelPortada = new javax.swing.JLabel();
+        jPanel1 = new FondoPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenuGestiones = new javax.swing.JMenu();
-        jMenuItemNuevaSolicitud = new javax.swing.JMenuItem();
-        jRadioButtonMenuItem1 = new javax.swing.JRadioButtonMenuItem();
-        jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
-        jMenuItemBuscarCliente = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        jMenuItemAyuda = new javax.swing.JMenuItem();
-        jMenuReportes = new javax.swing.JMenu();
-        jMenuItemReporteDiario = new javax.swing.JMenuItem();
-        jMenuItemListaSolicitudes = new javax.swing.JMenuItem();
-
-        jMenuItem1.setText("jMenuItem1");
+        menuGestiones = new javax.swing.JMenu();
+        menuRegistrarse = new javax.swing.JMenuItem();
+        menuIniciarSesion = new javax.swing.JMenuItem();
+        menuActualizarDatos = new javax.swing.JMenuItem();
+        menuComprarMembresia = new javax.swing.JMenuItem();
+        menuReportes = new javax.swing.JMenu();
+        menuListaClientes = new javax.swing.JMenuItem();
+        menuAyuda = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jLabelPortada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/portada.jpg"))); // NOI18N
+        setPreferredSize(new java.awt.Dimension(800, 600));
+        setSize(new java.awt.Dimension(500, 700));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabelPortada, javax.swing.GroupLayout.DEFAULT_SIZE, 1568, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabelPortada, javax.swing.GroupLayout.PREFERRED_SIZE, 1280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 135, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jMenuGestiones.setText("Gestiones");
-        jMenuGestiones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuGestionesActionPerformed(evt);
-            }
-        });
+        menuGestiones.setText("Gestiones");
+        menuGestiones.setMinimumSize(new java.awt.Dimension(32, 22));
+        menuGestiones.setPreferredSize(new java.awt.Dimension(100, 22));
 
-        jMenuItemNuevaSolicitud.setText("Rregistrarse");
-        jMenuItemNuevaSolicitud.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemNuevaSolicitudActionPerformed(evt);
-            }
-        });
-        jMenuGestiones.add(jMenuItemNuevaSolicitud);
+        menuRegistrarse.setText("Registrarse");
+        menuGestiones.add(menuRegistrarse);
 
-        jRadioButtonMenuItem1.setSelected(true);
-        jRadioButtonMenuItem1.setText("Iniciar Sesion");
-        jMenuGestiones.add(jRadioButtonMenuItem1);
+        menuIniciarSesion.setText("Iniciar Sesión");
+        menuGestiones.add(menuIniciarSesion);
 
-        jRadioButtonMenuItem2.setSelected(true);
-        jRadioButtonMenuItem2.setText("Comprar Membrecia");
-        jMenuGestiones.add(jRadioButtonMenuItem2);
+        menuActualizarDatos.setText("Actualizar datos");
+        menuGestiones.add(menuActualizarDatos);
 
-        jMenuItemBuscarCliente.setText("Buscar Cliente");
-        jMenuItemBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemBuscarClienteActionPerformed(evt);
-            }
-        });
-        jMenuGestiones.add(jMenuItemBuscarCliente);
-        jMenuGestiones.add(jSeparator1);
+        menuComprarMembresia.setText("Comprar membresía");
+        menuGestiones.add(menuComprarMembresia);
 
-        jMenuItemAyuda.setText("Ayuda");
-        jMenuItemAyuda.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemAyudaActionPerformed(evt);
-            }
-        });
-        jMenuGestiones.add(jMenuItemAyuda);
+        jMenuBar1.add(menuGestiones);
 
-        jMenuBar1.add(jMenuGestiones);
+        menuReportes.setText("Reportes");
+        menuReportes.setPreferredSize(new java.awt.Dimension(100, 22));
 
-        jMenuReportes.setText("Reportes");
-        jMenuReportes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuReportesActionPerformed(evt);
-            }
-        });
+        menuListaClientes.setText("Lista de clientes");
+        menuReportes.add(menuListaClientes);
 
-        jMenuItemReporteDiario.setText("Reporte de Compras");
-        jMenuItemReporteDiario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemReporteDiarioActionPerformed(evt);
-            }
-        });
-        jMenuReportes.add(jMenuItemReporteDiario);
+        menuAyuda.setText("Ayuda");
+        menuReportes.add(menuAyuda);
 
-        jMenuItemListaSolicitudes.setText("Lista de Clientes");
-        jMenuItemListaSolicitudes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItemListaSolicitudesActionPerformed(evt);
-            }
-        });
-        jMenuReportes.add(jMenuItemListaSolicitudes);
-
-        jMenuBar1.add(jMenuReportes);
+        jMenuBar1.add(menuReportes);
 
         setJMenuBar(jMenuBar1);
 
@@ -130,53 +97,18 @@ public class App extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(508, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jMenuGestionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuGestionesActionPerformed
-        
-    }//GEN-LAST:event_jMenuGestionesActionPerformed
-
-    private void jMenuItemNuevaSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemNuevaSolicitudActionPerformed
-        NuevoRegistro ventanaNRegistro = new NuevoRegistro(); // instancio la ventana
-        ventanaNRegistro.setVisible(true);
-    }//GEN-LAST:event_jMenuItemNuevaSolicitudActionPerformed
-
-    private void jMenuItemListaSolicitudesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemListaSolicitudesActionPerformed
-        Listar ventanaListar = new Listar();
-        ventanaListar.setVisible(true);
-    }//GEN-LAST:event_jMenuItemListaSolicitudesActionPerformed
-
-    private void jMenuItemBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemBuscarClienteActionPerformed
-        ActualizarCliente ventana = new ActualizarCliente();
-        ventana.setVisible(true);
-    }//GEN-LAST:event_jMenuItemBuscarClienteActionPerformed
-
-    private void jMenuReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuReportesActionPerformed
-        
-    }//GEN-LAST:event_jMenuReportesActionPerformed
-
-    private void jMenuItemReporteDiarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemReporteDiarioActionPerformed
-        Reporte ventanaReporte = new Reporte();
-        ventanaReporte.setVisible(true);
-    }//GEN-LAST:event_jMenuItemReporteDiarioActionPerformed
-
-    private void jMenuItemAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemAyudaActionPerformed
-        Ayuda ventana = new Ayuda();
-        ventana.setVisible(true);
-    }//GEN-LAST:event_jMenuItemAyudaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,6 +136,7 @@ public class App extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(App.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -214,19 +147,29 @@ public class App extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabelPortada;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jMenuGestiones;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItemAyuda;
-    private javax.swing.JMenuItem jMenuItemBuscarCliente;
-    private javax.swing.JMenuItem jMenuItemListaSolicitudes;
-    private javax.swing.JMenuItem jMenuItemNuevaSolicitud;
-    private javax.swing.JMenuItem jMenuItemReporteDiario;
-    private javax.swing.JMenu jMenuReportes;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
-    private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem2;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
+    private javax.swing.JMenuItem menuActualizarDatos;
+    private javax.swing.JMenuItem menuAyuda;
+    private javax.swing.JMenuItem menuComprarMembresia;
+    private javax.swing.JMenu menuGestiones;
+    private javax.swing.JMenuItem menuIniciarSesion;
+    private javax.swing.JMenuItem menuListaClientes;
+    private javax.swing.JMenuItem menuRegistrarse;
+    private javax.swing.JMenu menuReportes;
     // End of variables declaration//GEN-END:variables
+    class FondoPanel extends JPanel
+    {
+        private Image imagen;
+
+        @Override
+        public void paint(Graphics g)
+        {
+            imagen = new ImageIcon(getClass().getResource("/imagenes/portada.jpg")).getImage();
+            g.drawImage(imagen, 0, 0, getWidth(), getHeight(), this);
+
+            setOpaque(false);
+            super.paint(g);
+        }
+    }
 }
